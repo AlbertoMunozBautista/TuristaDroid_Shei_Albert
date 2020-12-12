@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +31,8 @@ class SplashActivity : AppCompatActivity() {
 
         //Se lanza el main activity a los 3 segundos
         Handler().postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+           // startActivity(Intent(this, LoginActivity::class.java))
+            //finish()
         }, 3000)
 
 
