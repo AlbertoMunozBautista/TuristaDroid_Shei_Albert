@@ -1,4 +1,4 @@
-package com.example.turistadroid_shei_albert.ui.home
+package com.example.turistadroid_shei_albert.ui.Linterna
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.turistadroid_shei_albert.R
 
-class HomeFragment : Fragment() {
+class LinternaFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
 
@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel =
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_linterna, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

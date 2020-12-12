@@ -6,10 +6,10 @@
             app:startDestination="@+id/nav_home">
 
     <fragment
-            android:id="@+id/nav_home"
-            android:name="com.example.turistadroid_shei_albert.ui.home.HomeFragment"
-            android:label="@string/menu_home"
-            tools:layout="@layout/fragment_home"/>
+            android:id="@+id/nav_linterna"
+            android:name="com.example.turistadroid_shei_albert.ui.Linterna.LinternaFragment"
+            android:label="@string/linterna"
+            tools:layout="@layout/fragment_linterna"/>
 
     <fragment
             android:id="@+id/nav_cercademi"
