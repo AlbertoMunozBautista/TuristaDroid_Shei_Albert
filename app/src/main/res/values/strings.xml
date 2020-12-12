@@ -1,13 +1,62 @@
 <resources>
-    <string name="app_name">TuristaDroid_Shei_Albert</string>
+    <string name="app_name">TuristaDroid</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="splash_texto">Turista Droid by</string>
+    <string name="splash_texto2">Alberto and Sheila</string>
+
+    <string name="correo">Correo</string>
+    <string name="contra">Contraseña</string>
+    <string name="login">Login</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombre_usuario">Usuario</string>
+    <string name="lugar">Lugar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="entrar">Entrar</string>
+    <string name="camara">Cámara</string>
+    <string name="galeria">Galería</string>
+    <string name="infoCamara">Foto de perfil</string>
+    <string name="twitter">Twitter</string>
+    <string name="github">GitHub</string>
+    <string name="GuardarCambios">Guardar cambios</string>
+    <string name="MiPerfil">Mi perfil</string>
+    <string name="codigoQr">Codigo Qr</string>
+    <string name="cercaDeMi">Cerca de mi</string>
+    <string name="MisSitios">Mis Sitios</string>
+    <string name="linterna">Linterna</string>
+    <string name="comentario">Comparte detalles de tu experiencia en este lugar</string>
+    <string name="anadir">Añadir</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="infoEliminar">¿Seguro que quiere eliminar el sitio?</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+    <string name="google_maps_key"></string>
+
+    <!-- Tipos de lugares para insertar -->
+    <string-array name="tipos_estrellas">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="tipos_busqueda">
+        <item>Fecha</item>
+        <item>Nombre</item>
+        <item>Puntuación</item>
+
+    </string-array>
 </resources>
