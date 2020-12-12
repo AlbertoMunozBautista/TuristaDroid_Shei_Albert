@@ -18,8 +18,8 @@
             tools:layout="@layout/fragment_cerca_de_mi"/>
 
     <fragment
-            android:id="@+id/nav_slideshow"
-            android:name="com.example.turistadroid_shei_albert.ui.slideshow.SlideshowFragment"
-            android:label="@string/menu_slideshow"
-            tools:layout="@layout/fragment_slideshow"/>
+            android:id="@+id/nav_misSitios"
+            android:name="com.example.turistadroid_shei_albert.ui.MisSitios.MisSitiosFragment"
+            android:label="@string/MisSitios"
+            tools:layout="@layout/fragment_mis_sitios"/>
 </navigation>

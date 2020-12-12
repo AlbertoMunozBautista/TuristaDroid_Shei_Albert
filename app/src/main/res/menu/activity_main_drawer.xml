@@ -13,8 +13,8 @@
                 android:icon="@drawable/ic_cerca_de_mi"
                 android:title="@string/cercaDeMi"/>
         <item
-                android:id="@+id/nav_slideshow"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_slideshow"/>
+                android:id="@+id/nav_sitios"
+                android:icon="@drawable/ic_missitios"
+                android:title="@string/MisSitios"/>
     </group>
 </menu>
