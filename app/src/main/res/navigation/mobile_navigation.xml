@@ -4,6 +4,16 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/mobile_navigation"
             app:startDestination="@+id/nav_home">
+    <fragment
+            android:id="@+id/nav_misSitios"
+            android:name="com.example.turistadroid_shei_albert.ui.MisSitios.MisSitiosFragment"
+            android:label="@string/MisSitios"
+            tools:layout="@layout/fragment_mis_sitios"/>
+    <fragment
+            android:id="@+id/nav_cerca"
+            android:name="com.example.turistadroid_shei_albert.ui.CercaDeMi.CercaDeMiFragment"
+            android:label="@string/cercaDeMi"
+            tools:layout="@layout/fragment_cerca_de_mi"/>
 
     <fragment
             android:id="@+id/nav_linterna"
@@ -11,15 +21,10 @@
             android:label="@string/linterna"
             tools:layout="@layout/fragment_linterna"/>
 
-    <fragment
-            android:id="@+id/nav_cercademi"
-            android:name="com.example.turistadroid_shei_albert.ui.CercaDeMi.CercaDeMiFragment"
-            android:label="@string/cercaDeMi"
-            tools:layout="@layout/fragment_cerca_de_mi"/>
 
     <fragment
-            android:id="@+id/nav_misSitios"
-            android:name="com.example.turistadroid_shei_albert.ui.MisSitios.MisSitiosFragment"
-            android:label="@string/MisSitios"
-            tools:layout="@layout/fragment_mis_sitios"/>
+            android:id="@+id/nav_perfil"
+            android:name="com.example.turistadroid_shei_albert.ui.Perfil.PerfilFragment"
+            android:label="@string/MiPerfil"
+            tools:layout="@layout/fragment_perfil"/>
 </navigation>
