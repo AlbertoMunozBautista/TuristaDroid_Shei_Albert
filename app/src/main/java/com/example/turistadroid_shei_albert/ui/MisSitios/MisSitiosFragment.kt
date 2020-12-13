@@ -394,6 +394,9 @@ class MisSitiosFragment : Fragment() {
      * Visualiza la lista de items
      */
     private fun visualizarListaItems() {
+        sitiosAdapter = SitiosListAdapter(SITIOS) {
+            eventoClicFila(it)
+        }
         ordenarLugares()
         sitiosRecycler.adapter = sitiosAdapter
 
