@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_anadir"
+        android:background="@drawable/color_fondo">
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:orientation="vertical">
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" app:srcCompat="@drawable/ic_star" android:id="@+id/imaAnadirEstrella"
+                    app:layout_constraintBottom_toBottomOf="@+id/spiAnadirEstrella"
+                    app:layout_constraintTop_toTopOf="@+id/spiAnadirEstrella"
+                    app:layout_constraintStart_toEndOf="@+id/spiAnadirEstrella"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    android:background="@drawable/borde_et"
+                    android:ems="10"
+                    android:hint="@string/comentario"
+                    android:id="@+id/etAnadirComentario"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btAnadirFecha" android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp" android:layout_marginStart="16dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/borde_et"
+                    android:ems="10"
+                    android:id="@+id/etAnadirNombre"
+                    android:drawableLeft="@drawable/ic_nombrelugar"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="15dp"
+                    android:hint="@string/nombre"
+                    android:layout_marginTop="23dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imaAnadirFoto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"/>
+            <ImageView
+                    android:id="@+id/btAnadirFecha"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_fecha"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/spiAnadirEstrella" android:layout_marginTop="22dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etAnadirLugar"/>
+            <Button
+                    android:text="@string/cancelar"
+                    android:layout_width="140dp"
+                    android:background="@drawable/borde_boton"
+                    android:textColor="@drawable/btn_text"
+                    android:layout_height="39dp" android:id="@+id/btnAnadirCancelar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnAnadirAnadir"
+                    app:layout_constraintTop_toBottomOf="@+id/detalleLugarMapa" android:layout_marginTop="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" app:srcCompat="@drawable/lugar4" android:id="@+id/imaAnadirFoto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"/>
+            <Button
+                    android:text="@string/anadir"
+                    android:layout_width="140dp"
+                    android:background="@drawable/borde_boton"
+                    android:textColor="@drawable/btn_text"
+                    android:layout_height="39dp" android:id="@+id/btnAnadirAnadir"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnAnadirCancelar"
+                    app:layout_constraintTop_toBottomOf="@+id/detalleLugarMapa" android:layout_marginTop="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/borde_et"
+                    android:ems="10"
+                    android:id="@+id/etAnadirLugar"
+                    android:drawableLeft="@drawable/ic_missitios"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="15dp"
+                    android:hint="@string/lugar"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etAnadirNombre"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"/>
+            <Spinner
+                    android:id="@+id/spiAnadirEstrella"
+                    android:layout_width="75dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:spinnerMode="dialog" android:entries="@array/tipos_estrellas"
+                    app:layout_constraintTop_toBottomOf="@+id/etAnadirLugar"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btAnadirFecha"/>
+
+            <fragment
+                    android:layout_height="300dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/detalleLugarMapa"
+                    tools:context="com.example.mislugares.UI.noticias.NoticiasFragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    app:layout_constraintTop_toBottomOf="@+id/etAnadirComentario"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp" android:layout_marginEnd="16dp" android:layout_marginStart="16dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tvAnadirFecha"
+                    app:layout_constraintBottom_toBottomOf="@+id/btAnadirFecha"
+                    app:layout_constraintTop_toTopOf="@+id/btAnadirFecha"
+                    app:layout_constraintEnd_toStartOf="@+id/btAnadirFecha" android:layout_marginEnd="1dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

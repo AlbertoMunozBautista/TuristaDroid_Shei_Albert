@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#32ADA9</color>
+    <color name="colorPrimaryDark">#2B9490</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="fondoSplash">#2D97F8</color>
+    <color name="textoSplash">#855609</color>
+
+    <color name="colorNegro">#000000</color>
+    <color name="colorBlanco">#FFFFFF</color>
+    <color name="colorGrisOscuro">#474646</color>
+    <color name="amarillo">#FFEB3B</color>
+
+    <color name="transparente">#00000000</color>
 </resources>
