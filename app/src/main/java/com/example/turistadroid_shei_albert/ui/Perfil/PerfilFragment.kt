@@ -40,7 +40,6 @@ class PerfilFragment : Fragment(){
     private lateinit var appResolver: ContentResolver
     private val IMAGEN_DIR = "/TuristaDroid"
     private lateinit var IMAGEN_URI: Uri
-    private val PROPORCION = 600
     private var IMAGEN_NOMBRE = ""
     private var IMAGEN_COMPRES = 30
     private var imagenMeter: String = ""

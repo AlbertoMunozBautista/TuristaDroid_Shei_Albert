@@ -32,8 +32,6 @@ class RegistroActivity : AppCompatActivity() {
     private val CAMARA = 2
     private val IMAGEN_DIR = "/TuristaDroid"
     private lateinit var IMAGEN_URI: Uri
-    private lateinit var IMAGEN_MEDIA_URI: Uri
-    private val PROPORCION = 600
     private var IMAGEN_NOMBRE = ""
     private var IMAGEN_COMPRES = 30
     private var imagenUsuario: String = ""
