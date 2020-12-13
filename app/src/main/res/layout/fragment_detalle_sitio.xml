@@ -1,14 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.MisSitios.DetalleSitioFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_detalle"
+        android:background="@drawable/color_fondo">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                                           android:orientation="vertical">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tvDetalleFecha"
+                    app:layout_constraintBottom_toBottomOf="@+id/imaDetalleFecha"
+                    app:layout_constraintTop_toTopOf="@+id/imaDetalleFecha"
+                    app:layout_constraintEnd_toStartOf="@+id/imaDetalleFecha"/>
+            <TextView
+                    android:background="@drawable/borde_et"
+                    android:drawableLeft="@drawable/ic_nombrelugar"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp" android:id="@+id/tvDetalleNombre"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imaDetalleFoto"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" app:srcCompat="@drawable/ic_fecha" android:id="@+id/imaDetalleFecha"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDetalleEstrella"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="18dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetalleLugar"/>
+            <TextView
+                    android:background="@drawable/borde_et"
+                    android:drawableLeft="@drawable/ic_missitios"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp" android:id="@+id/tvDetalleLugar"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetalleNombre"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" app:srcCompat="@drawable/lugar4" android:id="@+id/imaDetalleFoto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"/>
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" app:srcCompat="@drawable/ic_star" android:id="@+id/imaDetalleEstrella"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDetalleEstrella"
+                    app:layout_constraintTop_toTopOf="@+id/tvDetalleEstrella" android:layout_marginStart="1dp"
+                    app:layout_constraintStart_toEndOf="@+id/tvDetalleEstrella"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tvDetalleEstrella"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imaDetalleFecha" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetalleLugar"/>
+            <fragment
+                    android:layout_height="300dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/detalleLugarMapaDetalle"
+                    tools:context="com.example.mislugares.UI.noticias.NoticiasFragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetalleComentario"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/borde_et"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="15dp"
+                    android:layout_height="149dp" android:id="@+id/tvDetalleComentario"
+                    app:layout_constraintTop_toBottomOf="@+id/imaDetalleFecha"
+                    android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+            <Button
+                    android:text="@string/cerrar"
+                    android:id="@+id/btnDetalleCerrar"
+                    android:layout_width="140dp"
+                    android:background="@drawable/borde_boton"
+                    android:textColor="@drawable/btn_text"
+                    android:layout_height="39dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detalleLugarMapaDetalle" android:layout_marginTop="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="32dp"/>
 
-</FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
