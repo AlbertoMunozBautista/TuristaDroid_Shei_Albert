@@ -31,8 +31,8 @@ class SplashActivity : AppCompatActivity() {
 
         //Se lanza el main activity a los 3 segundos
         Handler().postDelayed({
-           // startActivity(Intent(this, LoginActivity::class.java))
-            //finish()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }, 3000)
 
 
