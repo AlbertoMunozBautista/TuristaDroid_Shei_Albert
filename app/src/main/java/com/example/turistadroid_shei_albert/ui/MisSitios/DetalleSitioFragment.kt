@@ -13,6 +13,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.turistadroid_shei_albert.R
+import com.example.turistadroid_shei_albert.Sitios.Sitio
+import com.example.turistadroid_shei_albert.Utilidades
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
@@ -40,18 +42,18 @@ class DetalleSitioFragment(
         savedInstanceState: Bundle?
     ): View? {
 
-        val root =  inflater.inflate(com.google.android.gms.maps.R.layout.fragment_detalle_sitio, container, false)
+        val root =  inflater.inflate(R.layout.fragment_detalle_sitio, container, false)
         //Rescatamos el contexto
         appContext = context!!.applicationContext
 
         //Creamos variables con los campos del layout
-        val botonDetalleCerrar: Button = root.findViewById(com.google.android.gms.maps.R.id.btnDetalleCerrar)
-        val imagenDetalleFoto: ImageView = root.findViewById(com.google.android.gms.maps.R.id.imaDetalleFoto)
-        val textViewDetalleFecha: TextView = root.findViewById(com.google.android.gms.maps.R.id.tvDetalleFecha)
-        val textViewDetalleNombre: TextView = root.findViewById(com.google.android.gms.maps.R.id.tvDetalleNombre)
-        val textViewDetalleLugar: TextView = root.findViewById(com.google.android.gms.maps.R.id.tvDetalleLugar)
-        val textViewDetalleComentario: TextView = root.findViewById(com.google.android.gms.maps.R.id.tvDetalleComentario)
-        val textViewDetalleEstrella: TextView = root.findViewById(com.google.android.gms.maps.R.id.tvDetalleEstrella)
+        val botonDetalleCerrar: Button = root.findViewById(R.id.btnDetalleCerrar)
+        val imagenDetalleFoto: ImageView = root.findViewById(R.id.imaDetalleFoto)
+        val textViewDetalleFecha: TextView = root.findViewById(R.id.tvDetalleFecha)
+        val textViewDetalleNombre: TextView = root.findViewById(R.id.tvDetalleNombre)
+        val textViewDetalleLugar: TextView = root.findViewById(R.id.tvDetalleLugar)
+        val textViewDetalleComentario: TextView = root.findViewById(R.id.tvDetalleComentario)
+        val textViewDetalleEstrella: TextView = root.findViewById(R.id.tvDetalleEstrella)
 
         //Iniciamos permisos y mapa
         initPermisos()
@@ -82,7 +84,7 @@ class DetalleSitioFragment(
     //Inicializamos el mapa
     private fun initMapa() {
         val mapFragment = childFragmentManager
-            .findFragmentById(com.google.android.gms.maps.R.id.detalleLugarMapaDetalle) as SupportMapFragment?
+            .findFragmentById(R.id.detalleLugarMapaDetalle) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
     }
 
@@ -155,7 +157,7 @@ class DetalleSitioFragment(
             result = Bitmap.createBitmap(dp(62f), dp(76f), Bitmap.Config.ARGB_8888)
             result.eraseColor(Color.TRANSPARENT)
             val canvas = Canvas(result)
-            val drawable = ContextCompat.getDrawable(context!!, com.google.android.gms.maps.R.drawable.map_pin)
+            val drawable = ContextCompat.getDrawable(context!!, R.drawable.map_pin)
             drawable?.setBounds(0, 0, dp(62f), dp(76f))
             drawable?.draw(canvas)
             val roundPaint = Paint(Paint.ANTI_ALIAS_FLAG)
