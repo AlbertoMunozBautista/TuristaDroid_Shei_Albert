@@ -42,7 +42,7 @@
     <string name="infoEliminar">¿Seguro que quiere eliminar el sitio?</string>
     <string name="si">Sí</string>
     <string name="no">No</string>
-    <string name="google_maps_key"></string>
+    <string name="google_maps_key">AIzaSyDUOHLh0ULrfuUuBk1LEVS0gc9J5jgxlXQ</string>
 
     <!-- Tipos de lugares para insertar -->
     <string-array name="tipos_estrellas">
