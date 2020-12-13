@@ -24,6 +24,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.net.toFile
 import com.example.turistadroid_shei_albert.R
+import com.example.turistadroid_shei_albert.Utilidades
 
 import java.io.IOException
 
