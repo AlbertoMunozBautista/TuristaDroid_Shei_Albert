@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
+import com.example.turistadroid_shei_albert.Usuarios.Usuario
+import com.example.turistadroid_shei_albert.Usuarios.UsuarioController
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -25,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //Iniciamos la base de datos realm
-        ///////////////UsuarioController.initRealm(this)
+        UsuarioController.initRealm(this)
 
         //Pedimos los permisos con dexter
         initPermisos()
@@ -40,14 +42,14 @@ class LoginActivity : AppCompatActivity() {
         //Al pulsar el text view registrarse nos lleva al RegistroActivity
         tvLoginRegistrarse.setOnClickListener(){
 
-            ////////////////startActivity(Intent(this, RegistroActivity::class.java))
+            startActivity(Intent(this, RegistroActivity::class.java))
             finish()
 
         }
 
         //Al pulsar el botón entrar nos lleva al método de recoger los datos
         btnLoginEntrar.setOnClickListener(){
-            //////////////recogerDatos()
+            recogerDatos()
         }
 
 
@@ -57,10 +59,7 @@ class LoginActivity : AppCompatActivity() {
      * Recogermos los datos de los edit text y los text view, comprobamos que no
      * están vacíos y entramos en el main activity
      */
-
-    /**
     private fun recogerDatos() {
-
         //Declaración de variable
 
         //lista con todos los usuarios de la aplicación
@@ -100,11 +99,8 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Usuario no registrado", Toast.LENGTH_SHORT).show()
             }
-
         }
-
     }
-    */
 
     /**
      * Función con la que vamos a comprobar los permisos de la aplicación
