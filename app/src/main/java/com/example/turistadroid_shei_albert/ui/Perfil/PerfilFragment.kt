@@ -22,9 +22,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.graphics.drawable.toBitmap
 import androidx.core.net.toFile
 import com.example.turistadroid_shei_albert.R
+import com.example.turistadroid_shei_albert.Usuarios.Usuario
+import com.example.turistadroid_shei_albert.Usuarios.UsuarioController
 import com.example.turistadroid_shei_albert.Utilidades
+import kotlinx.android.synthetic.main.fragment_perfil.*
 
 import java.io.IOException
 
@@ -214,5 +218,4 @@ class PerfilFragment : Fragment(){
             }
         }
     }
-}
 }
